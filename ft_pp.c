@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_pp.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:19:09 by hualhash          #+#    #+#             */
-/*   Updated: 2022/10/24 16:55:54 by hualhash         ###   ########.fr       */
+/*   Created: 2022/12/11 00:25:25 by hualhash          #+#    #+#             */
+/*   Updated: 2022/12/11 21:25:57 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_pp(unsigned long x, int *r)
 {
-	write(fd, &c, 1);
+	int		i;
+
+	i = 0;
+	write(1, "0x", 2);
+	i = ft_printhex_pointer(x, r);
+	return (i + 2);
 }
+
+// int main(void)
+// {
+// 	char *a;
+	
+// 	a = "strrtrtrttr";
+// 	ft_pp(a);
+// 	printf("\norignal: %p", a);
+	
+// }

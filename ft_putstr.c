@@ -6,7 +6,7 @@
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:12:56 by hualhash          #+#    #+#             */
-/*   Updated: 2022/12/08 21:20:53 by hualhash         ###   ########.fr       */
+/*   Updated: 2022/12/11 01:52:26 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_putstr(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		write(1, "(NULL)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (str[i] != '\0')
