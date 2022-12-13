@@ -6,7 +6,7 @@
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 00:25:25 by hualhash          #+#    #+#             */
-/*   Updated: 2022/12/11 21:25:57 by hualhash         ###   ########.fr       */
+/*   Updated: 2022/12/13 20:58:59 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ int	ft_pp(unsigned long x, int *r)
 // int main(void)
 // {
 // 	char *a;
+// 	int *h;
 	
-// 	a = "strrtrtrttr";
-// 	ft_pp(a);
+// 	// a = ;
+// 	ft_pp(-9223372036854775808UL, );
 // 	printf("\norignal: %p", a);
 	
 // }

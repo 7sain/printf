@@ -6,7 +6,7 @@
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 22:32:35 by hualhash          #+#    #+#             */
-/*   Updated: 2022/12/11 21:13:45 by hualhash         ###   ########.fr       */
+/*   Updated: 2022/12/13 20:56:07 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	ft_printhex_upper(unsigned int x, int *count)
 	// 	ft_putchar (x - 10 + 'A');
 	// }
 	// t = strlen(&count);
-	return (1);
+	return (0);
 }
