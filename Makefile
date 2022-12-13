@@ -6,7 +6,7 @@
 #    By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/05 18:17:13 by hualhash          #+#    #+#              #
-#    Updated: 2022/12/13 21:18:13 by hualhash         ###   ########.fr        #
+#    Updated: 2022/12/13 23:17:22 by hualhash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_uputnbr.c ft_printhex_small.c ft_printhex_upper.c ft_pp.c \
+SRCS = ft_printf.c function1.c \
 
 OBJS = $(SRCS:c=o)
 

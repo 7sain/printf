@@ -1,57 +1,86 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhex_small.c                                :+:      :+:    :+:   */
+/*   function1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 00:12:02 by hualhash          #+#    #+#             */
-/*   Updated: 2022/12/13 21:05:57 by hualhash         ###   ########.fr       */
+/*   Created: 2022/12/13 23:11:02 by hualhash          #+#    #+#             */
+/*   Updated: 2022/12/13 23:14:29 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhex_small(unsigned int x, int *count)
+int	ft_putchar(char c)
 {
-	char s[] = "0123456789abcdef";
-	if(x >= 16)
-		ft_printhex_small(x / 16, count);
-	*count += write(1, &s[x % 16], 1);
-	
-	// if (x >= 16)
-	// {
-	// 	*count += ft_printhex_small(x / 16, count);
-	// 	*count += ft_printhex_small(x % 16, count);
-	// }
-	// else if (x <= 9)
-	// {
-	// 	ft_putchar(x + '0');
-	// }
-	// else
-	// 	ft_putchar (x - 10 + 'a');
-	return (0);
+	write(1, &c, 1);
+	return (1);
 }
 
-int	ft_printhex_pointer(unsigned long x, int *count)
+int	ft_putnbr(int nb)
 {
-	char s[] = "0123456789abcdef";
-	if(x >= 16)
-		ft_printhex_small(x / 16, count);
-	*count += write(1, &s[x % 16], 1);
-	// if (x >= 16)
-	// {
-	// 	ft_printhex_small(x / 16, r);
-	// 	ft_printhex_small(x % 16, r);
-	// }
-	// else if (x <= 9)
-	// {
-	// 	ft_putchar(x + '0');
-	// }
-	// else
-	// 	ft_putchar (x - 10 + 'a');
-	return (0);
+	int	i;
+
+	i = 0;
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
+	if (nb < 0)
+	{
+		i += ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+			i += ft_putnbr(nb / 10);
+			i += ft_putnbr(nb % 10);
+	}
+	else
+		i += ft_putchar(nb + '0');
+	return (i);
 }
+
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
+int	ft_uputnbr(unsigned int nb)
+{
+	int	i;
+
+	i = 0;
+	if (nb < 0)
+	{
+		i += ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+			i += ft_uputnbr(nb / 10);
+			i += ft_uputnbr(nb % 10);
+	}
+	else
+		i += ft_putchar(nb + '0');
+	return (i);
+}
+
 int	ft_hex_base(unsigned long nb, int flag)
 {
 	int		c;
